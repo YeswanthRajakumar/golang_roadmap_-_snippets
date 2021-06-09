@@ -1,13 +1,13 @@
-### How will I execute go programs
+# How will I execute go programs
 
-``` go run ```
+### go run
 ```
 go run main.go
 ```
 
  This command takes one or more .go files then compiles it and then executes it instantly
 
-``` go build ```
+### go build
 
 ```
 go build main.go
