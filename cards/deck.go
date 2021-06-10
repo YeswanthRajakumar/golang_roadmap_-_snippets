@@ -1,8 +1,8 @@
 package main
 
 import "fmt"
-// Something like class deck extends string slice
 
+// Something like class deck extends string slice
 type deck []string
 
 func createDeck() deck{
@@ -16,13 +16,16 @@ func createDeck() deck{
 		}
 	}
 	return cards
-
 }
 
-
 func (d deck) display()  {
-	for _, card := range d {
-		fmt.Println(card)
+	for i, card := range d {
+		fmt.Println(i," ",card)
 	}
 	fmt.Println("No.of cards ->",len(d))
+}
+
+func deal(d deck, handSize int) (deck,deck) {
+	return d[:handSize],d[handSize:]
+	
 }
