@@ -1,9 +1,11 @@
 package main
 
-// import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	cards := createDeck()
-	cards.saveToDisk("demo.txt")
+	// cardsString,err := newDeckFromFile("demo.txt")
+	cards := newDeckFromFile("./cards/demo.txt")
+	fmt.Println(cards)
 }
-
