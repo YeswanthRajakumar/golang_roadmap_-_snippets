@@ -1,11 +1,9 @@
 package main
 
+// import "fmt"
+
 func main() {
 	cards := createDeck()
-	// cards.display()
-	cardsInHand , remainingDeck := deal(cards,5)
-	cardsInHand.display()
-	remainingDeck.display()
-
+	cards.saveToDisk("demo.txt")
 }
 

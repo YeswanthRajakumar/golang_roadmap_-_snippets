@@ -1,6 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"io/ioutil"
+	"path/filepath"
+	"strings"
+)
 
 // Something like class deck extends string slice
 type deck []string
@@ -28,4 +33,12 @@ func (d deck) display()  {
 func deal(d deck, handSize int) (deck,deck) {
 	return d[:handSize],d[handSize:]
 	
+}
+
+func (d deck) toString() string {
+	return strings.Join(d,",") 
+}
+
+func (d deck)saveToDisk(fileName string) error  {
+	return ioutil.WriteFile(fileName,[]byte(d.toString()),0666)
 }
