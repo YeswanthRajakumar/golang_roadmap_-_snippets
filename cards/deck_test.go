@@ -29,3 +29,16 @@ func TestDeal(t *testing.T) {
 		t.Errorf("Expect Equals but the Dealed deck is not Equal")
 	}
 }
+
+func TestSaveDeckToFileAndReadDeckFromFile(t *testing.T) {
+	d := createDeck()
+	fileSaveError := d.saveToDisk("_temp_deck")
+	if fileSaveError != nil {
+		t.Error("Error : ", fileSaveError)
+	}
+	loadedDeck := newDeckFromDisk("_temp_deck")
+	if len(loadedDeck) != len(d) {
+		t.Errorf("Expected lenght of loaded file is 52 but actual length is %v", len(loadedDeck))
+	}
+
+}

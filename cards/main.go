@@ -1,7 +1,7 @@
 package main
 
 func main() {
-	//cards := newDeckFromFile("./cards/demo.txt")
+	//cards := newDeckFromDisk("./cards/demo.txt")
 	//cards.display()
 }
 
