@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"os"
 	"testing"
 )
 
@@ -40,5 +41,7 @@ func TestSaveDeckToFileAndReadDeckFromFile(t *testing.T) {
 	if len(loadedDeck) != len(d) {
 		t.Errorf("Expected lenght of loaded file is 52 but actual length is %v", len(loadedDeck))
 	}
+
+	_ = os.Remove("_temp_deck")
 
 }
