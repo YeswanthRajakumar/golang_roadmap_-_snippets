@@ -1,11 +1,10 @@
 package main
 
-import (
-// "fmt"
-)
-
 func main() {
-	cards := newDeckFromFile("./cards/demo.txt")
-	cards.shuffleDeck()
-	cards.display()
+	//cards := newDeckFromFile("./cards/demo.txt")
+	//cards.display()
 }
+
+//Ace of Hearts
+//King of Spade
+//52
