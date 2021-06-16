@@ -34,7 +34,6 @@ func main() {
 			email: "yas@gmail.com",
 		},
 	}
-
 	s1.display()
 	s1.updateName("Yas")
 	s1.display()
